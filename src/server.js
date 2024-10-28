@@ -4,6 +4,8 @@ const express = require('express');
 const path = require('path');
 const configViewEngine = require('./config/viewEngine');
 const webRouter = require('./routes/web');
+// get client
+const connection = require('./config/database');
 
 const app = express();
 const port = process.env.PORT || 8888;
@@ -16,9 +18,11 @@ configViewEngine(app);
 // khai bao route
 app.use('/', webRouter);
 
+// test connection
+
 
 
 
 app.listen(port, hostname, () => {
-    console.log(`Example app listening1 on port ${port}`)
+    console.log(`Example app listening on port ${port}`)
 })
