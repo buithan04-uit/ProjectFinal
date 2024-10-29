@@ -3,32 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create A User</title>
+    <title>Update A User</title>
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
     <div class="topnav">
         <a href="/">Home</a>
-        <a class="active" href="/Create">Create User</a>
+        <a href="/Create">Create User</a>
     </div>
 
     <div class="form-add-new">
-        <form action="/create-user" method="post">
+        <form action="/update-user" method="post">
             <fieldset>
-                <legend>Add users</legend>
+                <legend>Update a user</legend>
 
-                <div class="input-group">
+                <div class="input-group d-none">
                     <label>Username : </label>
-                    <input type="text" id="userId" name="username" />
+                    <input type="text" id="usernameID" name="username" value="<%= userEdit.Username %>" />
                 </div>
                 <div class="input-group">
                     <label>Email : </label>
-                    <input type="text" id="emailID" name="email" />
+                    <input type="text" id="emailID" name="email" value="<%= userEdit.Email %>" />
                 </div>
                 <div class="input-group">
                     <label>Password : </label>
-                    <input type="text" id="passwordID" name="password" />
+                    <input type="text" id="passwordID" name="password" value="<%= userEdit.Password %>" />
                 </div>
                 <div>
                     <button>Submit</button>

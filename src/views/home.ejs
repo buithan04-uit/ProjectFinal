@@ -36,7 +36,7 @@
 
 <body>
   <div class="topnav">
-    <a class="active" href="#home">Home</a>
+    <a class="active" href="/">Home</a>
     <a href="/Create">Create User</a>
   </div>
   <div class="Table-container">
@@ -79,8 +79,11 @@
             <%= user.Password %>
           </td>
           <td>
-            <button>Edit</button>
-            <button>Delete</button>
+            <a href="/update/<%= user.Username %>">Edit</a>
+
+            <form action="/delete-user/<%= user.Username %>" method="=POST">
+              <button>Delete</button>
+            </form>
           </td>
         </tr>
         <% }); %>

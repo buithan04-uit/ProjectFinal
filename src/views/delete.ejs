@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update A User</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a href="/Create">Create User</a>
+    </div>
+
+    <div class="form-add-new">
+        <form action="/delete-user" method="post">
+            <fieldset>
+                <legend>Delete a user</legend>
+
+                <div class="input-group">
+                    <label> Are you sure to delete Username : </label>
+                    <input type="text" id="usernameID" name="username" value="<%= userDelete.Username %>" />
+                </div>
+                <div class="input-group">
+                    <label>With Email : </label>
+                    <input type="text" id="emailID" name="email" value="<%= userDelete.Email %>" />
+                </div>
+                <div class="input-group d-none">
+                    <label>Password : </label>
+                    <input type="text" id="passwordID" name="password" value="<%= userDelete.Password %>" />
+                </div>
+                <div>
+                    <button>Confirm</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
