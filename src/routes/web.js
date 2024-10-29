@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { getHomepage, getSample , postCreateUser,getCreatePage } = require('../controllers/homeController');
+const { getHomepage, getSample, postCreateUser, getCreatePage } = require('../controllers/homeController');
 
 
 // khai bao route
